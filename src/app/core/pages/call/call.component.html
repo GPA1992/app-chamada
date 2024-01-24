@@ -1,0 +1,32 @@
+<main class="flex flex-col justify-start items-start  h-full w-full  bg-white px-5">
+        <div  class=" p-11 w-full  flex flex-col justify-start items-start border-black border-2 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#4da895] mb-5">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 rounded shadow-[6px_6px_0px_rgba(128,193,179,1)]">
+                        
+                        <ng-container matColumnDef="name">
+                            <th class="rounded" mat-header-cell *matHeaderCellDef> Nome </th>
+                            <td class="rounded text-sm font-mono" mat-cell *matCellDef="let student"> {{student.name}} </td>
+                        </ng-container>
+                    
+ 
+                        <ng-container matColumnDef="status">
+                            <th class="rounded" mat-header-cell *matHeaderCellDef> Name </th>
+                            <td class="rounded text-sm font-mono"mat-cell *matCellDef="let student">
+                            {{ student.status }}
+                            </td>
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="action">
+                            <th class="rounded"  mat-header-cell *matHeaderCellDef> Weight </th>
+                            <td class="rounded text-sm font-mono" class="text-sm" mat-cell *matCellDef="let student"> 
+                                <button class="border border-black text-green-900 rounded-md shadow-[4px_4px_0px_rgba(0,0,0,1)] font-mono p-1.5 text-sm bg-gray-50">Providencia</button>
+                        </td>
+                        </ng-container>
+         
+                    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr  mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    
+                    
+        </div>
+</main>
